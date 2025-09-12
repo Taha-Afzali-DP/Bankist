@@ -62,7 +62,7 @@ This project is designed to practice the following:
 
 ## 📸 Preview  
 
-![Bankist Screenshot](screenshot.png)  
+![Bankist Screenshot](Bankist.png)  
 
 ---
 
