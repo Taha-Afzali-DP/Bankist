@@ -312,8 +312,6 @@ console.log(Math.floor(-23.3));
 console.log((2.7).toFixed(3));
 console.log(+(2.345).toFixed(2));
 
-*/
-
 //? Remainder
 console.log(5 % 2); // 5 = 2 * 2 + 1
 
@@ -339,3 +337,6 @@ labelBalance.addEventListener('click', function () {
     }
   });
 });
+*/
+const diameter = 287_460_000_000;
+console.log(diameter);
