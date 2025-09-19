@@ -292,8 +292,6 @@ const randomInt = (max, min) => {
 };
 console.log(randomInt(10, 20));
 
-*/
-
 //? Rounding Int
 console.log('---trunc---');
 console.log(Math.trunc(23.3));
@@ -313,3 +311,31 @@ console.log(Math.floor(-23.3));
 //? Rounding decimals
 console.log((2.7).toFixed(3));
 console.log(+(2.345).toFixed(2));
+
+*/
+
+//? Remainder
+console.log(5 % 2); // 5 = 2 * 2 + 1
+
+const isEven = num => {
+  if (num % 2 === 0) {
+    console.log('Its Zoj');
+  } else {
+    console.log('Its Fard');
+  }
+};
+isEven(10);
+isEven(11);
+isEven(0);
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+    if (i % 2 === 0) {
+      row.style.backgroundColor = 'green';
+      row.style.color = 'white';
+    }
+    if (i % 3 === 0) {
+      row.style.backgroundColor = 'black';
+      row.style.color = 'white';
+    }
+  });
+});
