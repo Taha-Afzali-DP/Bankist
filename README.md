@@ -1,5 +1,11 @@
 # Bankist App  
+---
 
+## 📸 Preview  
+
+![Bankist Screenshot](Bankist.png)  
+
+---
 A **JavaScript mini project** simulating a simple banking application.  
 This project is built with **HTML, CSS, and Vanilla JavaScript**, aiming to practice core and intermediate JavaScript concepts (DOM, events, arrays, methods, etc.).  
 
@@ -60,10 +66,5 @@ This project is designed to practice the following:
 
 ---
 
-## 📸 Preview  
-
-![Bankist Screenshot](Bankist.png)  
-
----
 
 👨‍💻 Project Owner: **Taha-Afzali-DP**
