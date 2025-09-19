@@ -94,7 +94,7 @@ const displayMovements = function (movements, sort = false) {
         <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-        <div class="movements__value">${mov}€</div>
+        <div class="movements__value">${mov.toFixed(0)}€</div>
       </div>
     `;
 
@@ -104,19 +104,19 @@ const displayMovements = function (movements, sort = false) {
 
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${acc.balance}€`;
+  labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
 };
 
 const calcDisplaySummary = function (acc) {
   const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes}€`;
+  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
 
   const out = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(out)}€`;
+  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
 
   const interest = acc.movements
     .filter(mov => mov > 0)
@@ -126,7 +126,7 @@ const calcDisplaySummary = function (acc) {
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest}€`;
+  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
 const createUsernames = function (accs) {
@@ -164,7 +164,7 @@ btnLogin.addEventListener('click', function (e) {
   );
   console.log(currentAccount);
 
-  if (currentAccount?.pin === +inputLoginPin.value) {
+  if (currentAccount?.pin === Math.floor(inputLoginPin.value)) {
     // Display UI and message
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(' ')[0]
@@ -250,6 +250,7 @@ btnSort.addEventListener('click', function (e) {
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+/* Numbers....::
 // LECTURES
 //! Conversation ::
 console.log(Number(23));
@@ -272,3 +273,43 @@ console.log(Number.isInteger(20));
 console.log(Number.isInteger('20'));
 console.log(Number.isInteger(+'20x'));
 console.log(Number.isInteger(23 / 0));
+
+//? SQRT
+console.log(Math.sqrt(25));
+console.log(25 ** (1 / 2));
+console.log(8 ** (1 / 3));
+//? MAX
+console.log(Math.max(55, 10, 1, 100, 0, 15, 250));
+//? MIN
+console.log(Math.min(55, 10, 1, 100, 0, 15, 250));
+//? PI
+console.log(Math.PI);
+//? Random Number
+console.log(Math.random());
+console.log(Math.trunc(Math.random() * 6) + 1);
+const randomInt = (max, min) => {
+  return Math.trunc(Math.random() * (max - min)) + 1 + min;
+};
+console.log(randomInt(10, 20));
+
+*/
+
+//? Rounding Int
+console.log('---trunc---');
+console.log(Math.trunc(23.3));
+console.log(Math.trunc(23.9));
+console.log('---round---');
+console.log(Math.round(23.3));
+console.log(Math.round(23.9));
+console.log('---ceil---');
+console.log(Math.ceil(23.3));
+console.log(Math.ceil(23.9));
+console.log('---floor---');
+console.log(Math.floor(23.3));
+console.log(Math.floor(23.9));
+
+console.log(Math.trunc(-23));
+console.log(Math.floor(-23.3));
+//? Rounding decimals
+console.log((2.7).toFixed(3));
+console.log(+(2.345).toFixed(2));
