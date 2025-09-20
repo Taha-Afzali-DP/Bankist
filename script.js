@@ -340,7 +340,7 @@ labelBalance.addEventListener('click', function () {
 
 const diameter = 287_460_000_000;
 console.log(diameter);
-*/
+
 //? BigInt
 console.log(2 ** 53 - 1);
 console.log(Number.MAX_SAFE_INTEGER);
@@ -355,3 +355,28 @@ if (20n > 20) {
 
 console.log(10 / 3);
 console.log(10n / 3n);
+
+//? Create a Dete
+const now = new Date();
+console.log(now);
+console.log(new Date('Sep 20 2025 16:11:17'));
+console.log(new Date(account1.movementsDates[0]));
+console.log(new Date(2037, 10, 19, 15, 23, 5));
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+*/
+const feuture = new Date(2037, 10, 19, 15, 23);
+console.log(feuture);
+console.log(feuture.getFullYear());
+console.log(feuture.getMonth());
+console.log(feuture.getDate());
+console.log(feuture.getDay());
+console.log(feuture.getHours());
+console.log(feuture.getMinutes());
+console.log(feuture.getSeconds());
+console.log(feuture.toISOString());
+console.log(feuture.getTime());
+console.log(new Date(2142244380000));
+console.log(Date.now());
+feuture.setFullYear(2040);
+console.log(feuture);
