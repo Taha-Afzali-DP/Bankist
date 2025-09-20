@@ -337,6 +337,21 @@ labelBalance.addEventListener('click', function () {
     }
   });
 });
-*/
+
 const diameter = 287_460_000_000;
 console.log(diameter);
+*/
+//? BigInt
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(19898615896844898479448448615486513546851345n);
+console.log(BigInt(198986158968));
+console.log(1000000n + 1000000n);
+if (20n > 20) {
+  console.log('20True');
+} else {
+  console.log('20nTrue');
+}
+
+console.log(10 / 3);
+console.log(10n / 3n);
